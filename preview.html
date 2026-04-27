@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BRAWL WAR SHOP</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: #111;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+nav a {
+    color: cyan;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+section {
+    padding: 100px 20px;
+    min-height: 100vh;
+}
+
+/* WELCOME SCREEN */
+#welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 50px;
+    background: radial-gradient(circle, #00ffff, #000);
+}
+
+/* HOME */
+#home {
+    background: linear-gradient(45deg, #0ff, #f0f, #00f);
+    text-align: center;
+}
+
+.scroll {
+    font-size: 40px;
+    margin-top: 20px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #111;
+    border: 2px solid cyan;
+    padding: 20px;
+    width: 200px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card button {
+    background: cyan;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* SPECIAL */
+.special {
+    border: 2px solid gold;
+}
+
+/* DISABLED */
+.disabled {
+    opacity: 0.5;
+}
+</style>
+</head>
+
+<body>
+
+<!-- WELCOME -->
+<div id="welcome">WELCOME</div>
+
+<!-- NAV -->
+<nav>
+<a href="#home">HOME</a>
+<a href="#about">ABOUT GAME</a>
+<a href="#shop">SHOP</a>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+<h1>WELCOME</h1>
+<h2>FREE CANDY</h2>
+<div class="scroll">👇</div>
+
+<h2>CANDYS</h2>
+
+<div class="cards">
+<div class="card">
+<h3>10 Candy</h3>
+<p>$0.25</p>
+<button>Buy</button>
+</div>
+
+<div class="card">
+<h3>30 Candy</h3>
+<p>$1</p>
+<button>Buy</button>
+</div>
+
+<div class="card">
+<h3>50 Candy</h3>
+<p>$2.50</p>
+<button>Buy</button>
+</div>
+
+<div class="card">
+<h3>75 Candy</h3>
+<p>$3</p>
+<button>Buy</button>
+</div>
+
+<div class="card special">
+<h3>100 Candy (SPECIAL)</h3>
+<p><s>$6</s> $4</p>
+<button>Buy</button>
+</div>
+
+<div class="card">
+<h3>FREE 50 Candy</h3>
+<button onclick="alert('You got 50 FREE Candy!')">Get</button>
+</div>
+
+<div class="card">
+<h3>Season Pass</h3>
+<p>$8</p>
+<button>Buy</button>
+</div>
+
+<div class="card disabled">
+<h3>Characters</h3>
+<p>Coming Soon</p>
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h1>ABOUT GAME</h1>
+<p>This is a fun candy battle game where you collect and use candy to win!</p>
+</section>
+
+<!-- SHOP -->
+<section id="shop">
+<h1>SHOP</h1>
+<p>Buy candy and upgrades here.</p>
+</section>
+
+<script>
+// welcome screen hide
+setTimeout(() => {
+    document.getElementById("welcome").style.display = "none";
+}, 2000);
+</script>
+
+</body>
+</html>
